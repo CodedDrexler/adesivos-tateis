@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingCart, Sun } from 'lucide-react';
+import { ShoppingCart, Sun, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   cartCount: number;
@@ -22,10 +22,12 @@ export const Header: React.FC<HeaderProps> = ({
   onAnnounce,
 }) => {
   const [activeTab, setActiveTab] = useState<'shop' | 'customize' | 'about'>('shop');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleTabClick = (tab: 'shop' | 'customize' | 'about', sectionId: string) => {
     setActiveTab(tab);
     onNavClick(sectionId);
+    setIsMobileMenuOpen(false);
     onAnnounce(`Navegando para ${tab}`);
   };
 
@@ -121,7 +123,7 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Right Actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5">
           {/* Cart Trigger */}
           <button
             onClick={onOpenCart}
@@ -135,8 +137,53 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             )}
           </button>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 md:hidden text-stone-800 hover:bg-stone-100 rounded-lg transition-colors cursor-pointer"
+            aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu de navegação"}
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <nav className="md:hidden bg-white border-t border-stone-200 px-4 py-3 flex flex-col gap-2 shadow-lg">
+          <button
+            onClick={() => handleTabClick('shop', 'hero')}
+            className={`w-full text-left py-2.5 px-3 rounded-lg text-sm font-medium transition-colors ${
+              activeTab === 'shop'
+                ? 'bg-stone-100 text-[#0070b8] font-bold'
+                : 'text-stone-700 hover:bg-stone-50'
+            }`}
+          >
+            Início
+          </button>
+          <button
+            onClick={() => handleTabClick('customize', 'customizer')}
+            className={`w-full text-left py-2.5 px-3 rounded-lg text-sm font-medium transition-colors ${
+              activeTab === 'customize'
+                ? 'bg-stone-100 text-[#0070b8] font-bold'
+                : 'text-stone-700 hover:bg-stone-50'
+            }`}
+          >
+            Personalizar
+          </button>
+          <button
+            onClick={() => handleTabClick('about', 'sobre')}
+            className={`w-full text-left py-2.5 px-3 rounded-lg text-sm font-medium transition-colors ${
+              activeTab === 'about'
+                ? 'bg-stone-100 text-[#0070b8] font-bold'
+                : 'text-stone-700 hover:bg-stone-50'
+            }`}
+          >
+            Sobre
+          </button>
+        </nav>
+      )}
     </header>
   );
 };

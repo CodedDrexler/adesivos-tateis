@@ -162,8 +162,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-stone-200 overflow-hidden relative my-8">
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+      <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-stone-200 overflow-hidden relative my-auto max-h-[92vh] flex flex-col">
         {/* Header */}
         <div className="p-6 bg-stone-900 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -194,7 +194,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         </div>
 
         {/* Body content based on step */}
-        <div className="p-6 space-y-6">
+        <div className="p-4 sm:p-6 space-y-6 overflow-y-auto flex-1">
           {/* Step 1: Customer Info */}
           {step === 'customer' && (
             <form onSubmit={handleCustomerSubmit} className="space-y-4">

@@ -31,7 +31,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         className="absolute inset-0 bg-black/50 backdrop-blur-xs transition-opacity"
       />
 
-      <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+      <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-0 sm:pl-10">
         <div className="pointer-events-auto w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
           
           {/* Header */}

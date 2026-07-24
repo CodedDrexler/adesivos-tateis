@@ -22,55 +22,55 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ heroImageUrl, onStartC
               />
             ) : (
               /* Exact 3D rendering representation of attached Product Image: 3 star cutout tactile tiles */
-              <div className="w-full h-[380px] sm:h-[460px] bg-stone-50 flex items-center justify-center p-6 relative overflow-hidden">
-                <div className="relative w-full max-w-md h-72 flex items-center justify-center">
+              <div className="w-full h-[320px] sm:h-[460px] bg-stone-50 flex items-center justify-center p-2 sm:p-6 relative overflow-hidden">
+                <div className="relative w-full max-w-xs sm:max-w-md h-64 sm:h-72 flex items-center justify-center scale-80 sm:scale-100">
                   
                   {/* Tile 1: Lilac / Light Purple (Left) */}
-                  <div className="absolute left-4 top-8 w-52 h-36 bg-[#c5b8e0] rounded-2xl border-2 border-[#b0a0d4] shadow-xl transform -rotate-12 flex flex-col justify-between p-4 z-10 transition-transform hover:scale-105">
+                  <div className="absolute left-0 sm:left-4 top-6 sm:top-8 w-44 sm:w-52 h-32 sm:h-36 bg-[#c5b8e0] rounded-2xl border-2 border-[#b0a0d4] shadow-xl transform -rotate-12 flex flex-col justify-between p-3 sm:p-4 z-10 transition-transform hover:scale-105">
                     <div className="flex justify-end space-x-1.5 pt-1 pr-1">
                       {/* 4 Raised Braille Dots */}
-                      <div className="w-3 h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
-                      <div className="w-3 h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
-                      <div className="w-3 h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
-                      <div className="w-3 h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a291ca] shadow-xs border border-[#8e7bb9]" />
                     </div>
                     {/* Star Cutout */}
                     <div className="my-auto mx-auto text-[#e2daef]">
-                      <svg className="w-16 h-16 fill-current drop-shadow-inner" viewBox="0 0 24 24">
+                      <svg className="w-12 h-12 sm:w-16 sm:h-16 fill-current drop-shadow-inner" viewBox="0 0 24 24">
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                       </svg>
                     </div>
                   </div>
 
                   {/* Tile 2: Teal / Cyan Blue (Middle) */}
-                  <div className="absolute left-24 top-12 w-52 h-36 bg-[#68abb8] rounded-2xl border-2 border-[#5297a5] shadow-2xl transform -rotate-6 flex flex-col justify-between p-4 z-20 transition-transform hover:scale-105">
+                  <div className="absolute left-16 sm:left-24 top-10 sm:top-12 w-44 sm:w-52 h-32 sm:h-36 bg-[#68abb8] rounded-2xl border-2 border-[#5297a5] shadow-2xl transform -rotate-6 flex flex-col justify-between p-3 sm:p-4 z-20 transition-transform hover:scale-105">
                     <div className="flex justify-end space-x-1.5 pt-1 pr-1">
                       {/* 4 Raised Braille Dots */}
-                      <div className="w-3 h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
-                      <div className="w-3 h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
-                      <div className="w-3 h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
-                      <div className="w-3 h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#468694] shadow-xs border border-[#377380]" />
                     </div>
                     {/* Star Cutout */}
                     <div className="my-auto mx-auto text-[#b2d9e0]">
-                      <svg className="w-16 h-16 fill-current drop-shadow-inner" viewBox="0 0 24 24">
+                      <svg className="w-12 h-12 sm:w-16 sm:h-16 fill-current drop-shadow-inner" viewBox="0 0 24 24">
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                       </svg>
                     </div>
                   </div>
 
                   {/* Tile 3: Red / Dusty Mauve (Right) */}
-                  <div className="absolute left-44 top-16 w-52 h-36 bg-[#d65252] rounded-2xl border-2 border-[#c23e3e] shadow-2xl transform rotate-3 flex flex-col justify-between p-4 z-30 transition-transform hover:scale-105">
+                  <div className="absolute left-32 sm:left-44 top-14 sm:top-16 w-44 sm:w-52 h-32 sm:h-36 bg-[#d65252] rounded-2xl border-2 border-[#c23e3e] shadow-2xl transform rotate-3 flex flex-col justify-between p-3 sm:p-4 z-30 transition-transform hover:scale-105">
                     <div className="flex justify-end space-x-1.5 pt-1 pr-1">
                       {/* 4 Raised Braille Dots */}
-                      <div className="w-3 h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
-                      <div className="w-3 h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
-                      <div className="w-3 h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
-                      <div className="w-3 h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#a83232] shadow-xs border border-[#8f2323]" />
                     </div>
                     {/* Star Cutout */}
                     <div className="my-auto mx-auto text-[#f2aab2]">
-                      <svg className="w-16 h-16 fill-current drop-shadow-inner" viewBox="0 0 24 24">
+                      <svg className="w-12 h-12 sm:w-16 sm:h-16 fill-current drop-shadow-inner" viewBox="0 0 24 24">
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                       </svg>
                     </div>

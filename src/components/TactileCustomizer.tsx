@@ -153,7 +153,7 @@ export const TactileCustomizer: React.FC<TactileCustomizerProps> = ({
               </h3>
 
               {/* 4 Square Shape Button Boxes matching screenshot */}
-              <div className="grid grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
                 {TACTILE_SHAPES.slice(0, 4).map((shape) => {
                   const isSelected = selectedShape.id === shape.id;
                   return (
