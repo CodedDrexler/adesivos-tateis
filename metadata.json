@@ -1,0 +1,6 @@
+{
+  "name": "Adesivos Táteis",
+  "description": "Personalize e adquira adesivos táteis para autonomia e acessibilidade com integração Mercado Pago.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
